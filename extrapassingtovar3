@@ -1,0 +1,2 @@
+/usr/bin/ansible-playbook var3.yml -e "user_name=user1"
+
