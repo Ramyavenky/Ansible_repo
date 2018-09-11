@@ -1,0 +1,8 @@
+FROM centos
+MAINTAINER kumar
+COPY nginx.repo /etc/yum.repos.d/
+RUN yum repolist
+RUN yum install -y nginx
+COPY index.html /usr/share/nginx/html/
+EXPOSE 80
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
